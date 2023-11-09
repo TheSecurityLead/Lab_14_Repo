@@ -12,7 +12,38 @@ let canvasElem = document.getElementById('chart')
  * - Call chart.js with the configuration and the canvasElem
  *
  */
+
+
 function renderChart() {
+  const data = {
+    labels: imageNames,
+    datasets: [
+      {
+        label: 'Votes',
+        data: imageVotes,
+        backgroundColor: ['green']
+
+      },
+      {
+        label: 'Views',
+        data: imageViews,
+        backgroundColor: ['rebeccapurple']
+      }
+    ]
+  }
+  let config = {
+    type: 'bar',
+    data: data,
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  }
+  let myChart = new Chart(canvasElem, config);
+
 }
 
 renderChart();
