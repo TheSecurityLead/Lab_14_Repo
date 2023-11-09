@@ -1,5 +1,7 @@
 'use strict';
 
+chartData = [];
+
 let canvasElem = document.getElementById('chart')
 
 /* TODO:
