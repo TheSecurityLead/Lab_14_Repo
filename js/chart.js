@@ -1,6 +1,7 @@
 'use strict';
 
-chartData = [];
+let chartData = [];
+console.log(chartData);
 
 let canvasElem = document.getElementById('chart')
 

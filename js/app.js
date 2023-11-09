@@ -35,6 +35,11 @@ AppState.prototype.loadItems = function () {
   this.instantiateProducts();
 }
 
+for(let i = 1; i < labAppState.allProducts.length; i++){
+  chartData.push(labAppState.allProducts[i]);
+}
+
+
 
 function Product(name, fileExtension = 'jpg') {
   this.name = name;
